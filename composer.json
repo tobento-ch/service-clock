@@ -1,0 +1,45 @@
+{
+    "name": "tobento/service-clock",
+    "type": "library",
+    "description": "PSR-20 clocks for PHP applications.",
+    "keywords": [
+        "tobento",
+        "package",
+        "PHP",
+        "clock",
+        "PSR-20"
+    ],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "psr/clock": "^1.0"
+    },  
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tobento\\Service\\Clock\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tobento\\Service\\Clock\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always",
+        "psalm": "vendor/bin/psalm"
+    }
+}
